@@ -1,0 +1,12 @@
+class Solution:
+    def luckyNumbers (self, matrix: List[List[int]]) -> List[int]:
+        a=[]
+        for i in range (len (matrix)):
+            mini=min(matrix[i])
+            ind=matrix[i].index(mini)
+            maxi=max([matrix[j][ind] for j in range(len(matrix))])
+                
+            if mini==maxi:
+                a.append(maxi)
+        return a
+                
